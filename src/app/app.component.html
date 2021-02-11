@@ -3,13 +3,13 @@
     <h1 class="brand">ALEXANDRE MAXIMIANO</h1>
   </div>
   <nav class="navbar-vertical">
-    <a routerLink="/resumo" class="nav-link" >RESUMO</a>
-    <a routerLink="/objetivos" class="nav-link">OBJETIVOS</a>
-    <a routerLink="/contato" class="nav-link">CONTATOS</a>
+    <a routerLink="/resumo" class="nav-link" (click)='chagingRouting(0)' >RESUMO</a>
+    <a routerLink="/objetivos" class="nav-link" (click)='chagingRouting(1)'>OBJETIVOS</a>
+    <a routerLink="/contato" class="nav-link" (click)='chagingRouting(2)'>CONTATOS</a>
   </nav>
 </header>
 
-<div class="container">
+<div class="container" [@Changing]='changing'>
   <router-outlet>
   
   </router-outlet>  
